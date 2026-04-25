@@ -59,6 +59,17 @@
       margin-bottom: 0.3rem;
     }
     header h1 span.jp { font-size: 1.1rem; color: var(--muted); margin-left: 0.5em; }
+    header .photo {
+      float: right;
+      margin: 0 0 1rem 2rem;
+    }
+    header .photo img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--rule);
+    }
     header .affil {
       font-family: system-ui, sans-serif;
       font-size: 0.9rem;
@@ -164,6 +175,7 @@
 
 <!-- ══ Header ══ -->
 <header>
+  <div class="photo"><img src="photo.jpg" alt="Ryu Hayakawa"></div>
   <h1>Ryu Hayakawa <span class="jp">早川 龍</span></h1>
   <div class="affil">
     <span data-lang="en">
