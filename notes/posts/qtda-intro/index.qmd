@@ -1,0 +1,25 @@
+---
+title: "Quantum Topological Data Analysis: An Introduction"
+date: 2026-05-14
+description: "A brief introduction to quantum algorithms for topological data analysis, focusing on persistent homology."
+---
+
+## What is Topological Data Analysis?
+
+Topological data analysis (TDA) extracts shape information from data using tools from algebraic topology.
+The central object is the **persistent homology** of a filtered simplicial complex built from data points.
+
+Given a point cloud $X \subset \mathbb{R}^d$, we construct a filtration
+$$\emptyset = K_0 \subseteq K_1 \subseteq \cdots \subseteq K_m$$
+and track how homology classes are born and die across the filtration.
+The $k$-th **Betti number** $\beta_k(K_i)$ counts the number of $k$-dimensional holes at scale $i$.
+
+## The Quantum Algorithm
+
+The key insight is that Betti numbers can be computed via the **combinatorial Laplacian**:
+$$\Delta_k = \partial_k^\dagger \partial_k + \partial_{k+1} \partial_{k+1}^\dagger$$
+where $\partial_k$ is the boundary operator. The $k$-th Betti number equals
+$$\beta_k = \dim \ker \Delta_k.$$
+
+Estimating $\beta_k$ on a quantum computer reduces to estimating the fraction of near-zero eigenvalues of $\Delta_k$,
+which can be done via **quantum phase estimation** in time $O(\beta_k / \varepsilon)$.

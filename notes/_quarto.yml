@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: ../docs/notes
+
+website:
+  title: "Ryu Hayakawa — Notes"
+  navbar: false
+  page-footer:
+    left: "Ryu Hayakawa · [← Back to homepage](https://ryuhayakawa.github.io)"
+
+format:
+  html:
+    theme: none
+    css: style.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    html-math-method: katex
+    link-external-newwindow: true

@@ -1,0 +1,10 @@
+---
+title: "Notes"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+---
+
+Research notes on quantum computing, topological data analysis, and related topics.
